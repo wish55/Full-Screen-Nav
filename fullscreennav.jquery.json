@@ -1,0 +1,38 @@
+{
+	"name": "fullscreennav",
+	"title": "jQuery Full Screen Nav",
+	"description": "Make your navigation a full screen overlay.",
+	"keywords": [
+		"navigation",
+		"nav",
+		"navigation",
+		"full screen",
+		"overlay"
+	],
+	"version": "1.0",
+	"author": {
+		"name": "Damon Bauer",
+		"email": "hello@damonbauer.me",
+		"url": "https://github.com/damon_bauer"
+	},
+	"maintainers": [
+		{
+		"name": "Damon Bauer",
+		"email": "hello@damonbauer.me",
+		"url": "https://github.com/damon_bauer"
+		}
+	],
+	"licenses": [
+		{
+			"type": "WTFPL",
+			"url": "http://www.wtfpl.net/"
+		}
+	],
+	"bugs": "https://github.com/damonbauer/Full-Screen-Nav/issues",
+	"homepage": "https://github.com/damonbauer/Full-Screen-Nav",
+	"docs": "https://github.com/damonbauer/Full-Screen-Nav/blob/master/README.md",
+	"download": "https://github.com/damonbauer/Full-Screen-Nav/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}

@@ -2,11 +2,29 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
+		// Import package manifest
+		pkg: grunt.file.readJSON("fullscreennav.jquery.json"),
+
+		// Banner definitions
+		meta: {
+			banner: "/*\n" +
+				" *  <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n" +
+				" *  <%= pkg.description %>\n" +
+				" *  <%= pkg.homepage %>\n" +
+				" *\n" +
+				" *  Made by <%= pkg.author.name %>\n" +
+				" *  Under <%= pkg.licenses[0].type %> License\n" +
+				" */\n"
+		},
+
 		// Concat definitions
 		concat: {
 			dist: {
 				src: ["src/jquery.fullscreennav.js"],
 				dest: "dist/jquery.fullscreennav.js"
+			},
+			options: {
+				banner: "<%= meta.banner %>"
 			}
 		},
 
@@ -23,6 +41,9 @@ module.exports = function(grunt) {
 			my_target: {
 				src: ["dist/jquery.fullscreennav.js"],
 				dest: "dist/jquery.fullscreennav.min.js"
+			},
+			options: {
+				banner: "<%= meta.banner %>"
 			}
 		},
 

@@ -6,11 +6,11 @@
 		var pluginName = "fullScreenNav",
 			defaults = {
 				baseFontSize: 16, // used to calculate rem’s. http://techtime.getharvest.com/blog/in-defense-of-rem-units
-				closeMenuBtnText: "&times;", // text for the close button when the menu opens. Defaults to "&time; (x)"
+				closeMenuBtnText: "×", // text for the close button when the menu opens. Defaults to "× (&times; / multiplcation sign)"
 				closeMenuBtnClass: ".close-menu-btn", // class to add to close menu button.
 				fontSizeDivisor: 2.25, // "1" would make the font-size fill all available space. I found 2.25 to be visually appealing. The larger the number, the smaller the text will become.
 				menuBtn: ".open-menu-btn", // selector that, when clicked, opens the menu. You need to supply this in the html.
-				openClass: ".open" // class to add to nav menu when opening
+				openClass: ".open" // class to add to nav menu when opening.
 			};
 
 		// The actual plugin constructor
