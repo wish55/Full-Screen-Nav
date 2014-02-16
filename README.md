@@ -25,21 +25,24 @@ You should markup your HTML with a basic `<nav>` list, like so:
 ### Necessary CSS
 You’ll have to set the `<nav>` offscreen to begin with. In the demo, I do this by setting a position and pulling it offscreen:
 
-	nav {
-		position: fixed;
-		top:-100%;
-		width:100%;
-		z-index:10;
-	}
+```css
+nav {
+	position: fixed;
+	top:-100%;
+	width:100%;
+	z-index:10;
+}
+```
 
 
 Also, you’ll need to position the close button. I do this by applying the following CSS:
 
-	a.close-menu-btn {
-	    position: absolute;
-	    top:10px; right:10px;
-	}
-
+```css
+a.close-menu-btn {
+    position: absolute;
+    top:10px; right:10px;
+}
+```
 
 ## Include the plugin
 Somewhere after you load jQuery, load the plugin, like so:
