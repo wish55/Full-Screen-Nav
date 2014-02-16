@@ -42,6 +42,13 @@ nav {
 }
 ```
 
+The  "openClass" option defines what class is added when the menu is opened. By default, this is `.open`. You need to add some CSS to position the menu back onto the screen when this class is active:
+
+```css
+nav.open {
+	top: 0;
+}
+```
 
 Also, you’ll need to position the close button. I do this by applying the following CSS:
 
