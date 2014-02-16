@@ -1,15 +1,14 @@
 {
-	"name": "fullscreennav",
+	"name": "jQuery.fullScreenNav",
 	"title": "jQuery Full Screen Nav",
-	"description": "Make your navigation a full screen overlay.",
+	"description": "Transform a standard <nav> list into a full screen overlay. Similar to http://hugeinc.com.",
 	"keywords": [
 		"navigation",
 		"nav",
 		"navigation",
-		"full screen",
 		"overlay"
 	],
-	"version": "1.0",
+	"version": "0.1.0",
 	"author": {
 		"name": "Damon Bauer",
 		"email": "hello@damonbauer.me",
