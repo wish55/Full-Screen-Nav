@@ -6,6 +6,11 @@ The plugin uses `rem` units, so it requires at least IE 9 by default.
 ## Installation
 <a name="html"></a>
 ### Expected HTML
+Include a way to open the navigation menu, like so:
+```html
+<a href="#" class="open-menu-btn">Menu</a>
+```
+
 You should markup your HTML with a basic `<nav>` list, like so:
 ```html
 <nav>
@@ -15,12 +20,6 @@ You should markup your HTML with a basic `<nav>` list, like so:
     </ul>
 </nav>
 ```
-
-Finally, include a way to open the navigation menu, like so:
-```html
-<a href="#" class="open-menu-btn">Menu</a>
-```
-I usually put this right before the `<nav>` code.
 
 <a name="css"></a>
 ### Necessary CSS
@@ -69,8 +68,8 @@ All options are defined below with their default values.<br /><br />
 `baseFontSize: 16`<br />
 **baseFontSize** *(int or string)*: Used to calculate `rem`. If this option is `"16"`, 1rem = 16px. [Read more about rems](http://techtime.getharvest.com/blog/in-defense-of-rem-units).
 
-`closeMenuBtnText: "\u00D7"`<br />
-**closeMenuBtnText** *(string)*: Text for the close button when the menu opens. "\u00D7" is the unicode character for the multiplication symbol (&times;).
+`closeMenuBtnText: "×"`<br />
+**closeMenuBtnText** *(string)*: Text for the close button when the menu opens. Default is the multiplication symbol (&times;).
 
 `closeMenuBtnClass: ".close-menu-btn"`<br />
 **closeMenuBtnClass** *(string)*: Class to add to close menu button.
