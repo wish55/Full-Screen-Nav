@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #039abe;
+  font-weight: 700;
+  font-family: 'Karla', sans-serif; }
+
+header {
+  background-color: #025d72;
+  position: relative; }
+  header h1 {
+    text-align: center;
+    color: white;
+    padding: 30px 0;
+    padding: 1.875rem 0;
+    font-size: 30px;
+    font-size: 1.875rem;
+    transition: font-size ease-in-out .25s, letter-spacing ease-in-out .25s; }
+    @media screen and (min-width: 40rem) {
+      header h1 {
+        letter-spacing: 2px;
+        font-size: 50px;
+        font-size: 3.125rem; } }
+  header a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    transition: color ease-in-out .25s, background-color ease-in-out .25s, text-shadow ease-in-out .25s; }
+  header a.open-menu-btn {
+    position: absolute;
+    top: 42%;
+    left: 0;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0; }
+    header a.open-menu-btn:after {
+      content: " ";
+      border-color: #039abe;
+      border-style: solid none double;
+      border-width: 4px 0 12px;
+      display: block;
+      transition: border-color ease-in-out .25s;
+      height: 4px;
+      height: 0.25rem;
+      width: 32px;
+      width: 2rem; }
+    header a.open-menu-btn:hover:after {
+      border-color: #0386a4; }
+  header a.close-menu-btn {
+    position: absolute;
+    color: #039abe;
+    text-decoration: none;
+    right: 15px;
+    right: 0.9375rem;
+    font-size: 36px;
+    font-size: 2.25rem; }
+    header a.close-menu-btn:hover {
+      color: #0386a4; }
+  header nav {
+    background: rgba(0, 38, 53, 0.9);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: top ease-in-out .5s; }
+    header nav.open {
+      top: 0; }
+    header nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    header nav li a {
+      color: #ab1a25;
+      text-shadow: 1px 1px 0 rgba(227, 72, 84, 0.75); }
+      header nav li a:hover {
+        background-color: #013440;
+        color: #7f131b;
+        text-shadow: 1px 1px 0 rgba(82, 13, 18, 0.75); }

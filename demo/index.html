@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Full Screen Nav</title>
+		<link href="http://fonts.googleapis.com/css?family=Karla:700" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<a href="#" class="open-menu-btn">Menu</a>
+
+			<h1>Full Screen Nav</h1>
+
+			<nav>
+				<ul>
+					<li><a href="#link1">Link 1</a></li>
+					<li><a href="#link2">Another Link</a></li>
+					<li><a href="#link3">Link 3</a></li>
+					<li><a href="#link4">Fourth Link</a></li>
+					<li><a href="#link5">The Last Link</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="../dist/jquery.fullscreennav.js"></script>
+		<script>
+			$(function() {
+				$("nav").fullScreenNav();
+			});
+		</script>
+	</body>
+</html>

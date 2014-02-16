@@ -1,0 +1,137 @@
+$blue: #013440;
+$darkBlue: #002635;
+$red: #AB1A25;
+//thanks to Eric Meyer for https://github.com/ericam/susy
+//and Hans Christian Reinl for http://drublic.de/blog/rem-fallback-sass-less/
+@mixin rem($property, $values) {
+  // Create a couple of empty lists as output buffers.
+  $base-font-size: 16px !global; // should be consistent with your html/body font-size
+  $px-values: ();
+  $rem-values: ();
+
+  // Loop through the $values list
+  @each $value in $values {
+    // For each property value, if it's in rem or px, derive both rem and
+    // px values for it and add those to the end of the appropriate buffer.
+    // Ensure all pixel values are rounded to the nearest pixel.
+    @if $value == 0 or $value == 0px {
+      // 0 -- use it without a unit
+      $px-values: join($px-values, 0);
+      $rem-values: join($rem-values, 0);
+    } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+      // px value given - calculate rem value from base-font-size
+      $new-rem-value: $value / $base-font-size;
+      $px-values: join($px-values, round($value));
+      $rem-values: join($rem-values, #{$new-rem-value}rem);
+    } @else {
+      // unitless value - use those directly as rem and calculate the px-fallback
+      $px-values: join($px-values, round($value * $base-font-size));
+      $rem-values: join($rem-values, #{$value}rem);
+    }
+  }
+
+  // output the converted rules
+  #{$property}: $px-values;
+  #{$property}: $rem-values;
+}
+
+* {
+	box-sizing: border-box;
+	margin:0; padding:0;
+}
+
+body {
+	background-color: lighten($blue, 25%);
+	font-weight: 700;
+	font-family: 'Karla', sans-serif;
+}
+
+header {
+	background-color: lighten($blue, 10%);
+	position: relative;
+
+	h1 {
+		text-align: center;
+		color:white;
+		@include rem(padding, 30px 0);
+		@include rem(font-size, 30px);
+		transition: font-size ease-in-out .25s, letter-spacing ease-in-out .25s;
+
+		@media screen and (min-width: 40rem) {
+			letter-spacing: 2px;
+			@include rem(font-size, 50px);
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		transition: color ease-in-out .25s, background-color ease-in-out .25s, text-shadow ease-in-out .25s;
+	}
+
+	a.open-menu-btn {
+		position: absolute;
+		top:42%; left:0;
+	    font-size: 0;
+	    line-height: 0;
+	    margin:0; padding:0;
+
+	    &:after {
+		    content: " ";
+		    border-color: lighten($blue, 25%);
+		    border-style: solid none double;
+		    border-width: 4px 0 12px;
+		    display: block;
+		    transition: border-color ease-in-out .25s;
+		    @include rem(height, 4px);
+		    @include rem(width, 32px);
+		}
+
+		&:hover {
+			&:after {
+		    	border-color: lighten($blue, 20%);
+			}
+		}
+	}
+
+	a.close-menu-btn {
+		position: absolute;
+		color: lighten($blue, 25%);
+		text-decoration: none;
+		@include rem(right, 15px);
+		@include rem(font-size, 36px);
+
+		&:hover {
+	    	color: lighten($blue, 20%);
+		}
+	}
+
+	nav {
+		background:rgba($darkBlue, 0.9);
+		position: fixed;
+		top:-100%; left:0;
+		width:100%;
+		z-index:10;
+		transition: top ease-in-out .5s;
+
+		&.open { top: 0; }
+
+		ul {
+			margin:0; padding:0;
+			list-style:none;
+		}
+
+		li a {
+			color:$red;
+			text-shadow: 1px 1px 0 lighten(rgba($red, .75), 20%);
+
+			&:hover {
+				background-color:$blue;
+				color:darken($red, 10%);
+				text-shadow: 1px 1px 0 darken(rgba($red, .75), 20%);
+			}
+		}
+	}
+
+}
