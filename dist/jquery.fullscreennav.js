@@ -67,6 +67,8 @@
 						// click on menuBtn, closeMenuBtn, or a link in the menu and fire toggleMenu function
 						$(this.settings.menuBtn).add(closeMenuBtn).add(links).on("click", function() {
 							self.toggleMenu(this.element, this.settings);
+
+							return false;
 						});
 				},
 
