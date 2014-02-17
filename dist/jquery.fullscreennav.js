@@ -1,6 +1,6 @@
 /*
- *  jQuery Full Screen Nav - v1.0
- *  Make your navigation a full screen overlay.
+ *  jQuery Full Screen Nav - v0.1.1
+ *  Transform a standard <nav> list into a full screen overlay. Similar to http://hugeinc.com.
  *  https://github.com/damonbauer/Full-Screen-Nav
  *
  *  Made by Damon Bauer
@@ -14,7 +14,7 @@
 		var pluginName = "fullScreenNav",
 			defaults = {
 				baseFontSize: 16, // used to calculate rem’s. http://techtime.getharvest.com/blog/in-defense-of-rem-units
-				closeMenuBtnText: "×", // text for the close button when the menu opens. Defaults to "× (&times; / multiplcation sign)"
+				closeMenuBtnText: "\u00d7", // text for the close button when the menu opens. Defaults to "× (&times; / multiplcation sign)"
 				closeMenuBtnClass: ".close-menu-btn", // class to add to close menu button.
 				fontSizeDivisor: 2.25, // "1" would make the font-size fill all available space. I found 2.25 to be visually appealing. The larger the number, the smaller the text will become.
 				menuBtn: ".open-menu-btn", // selector that, when clicked, opens the menu. You need to supply this in the html.
