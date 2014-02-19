@@ -68,12 +68,12 @@ Somewhere after you load jQuery, load the plugin, like so:
 
 ### Call the plugin (with any desired options)
 Finally, call the plugin. Using default options:
-```html
+```javascript
 $("nav").fullScreenNav();
 ```
 
 Calling the plugin with [options](#options):
-```html
+```javascript
 $("nav").fullScreenNav({
 	"option": "optionValue",
 	...
